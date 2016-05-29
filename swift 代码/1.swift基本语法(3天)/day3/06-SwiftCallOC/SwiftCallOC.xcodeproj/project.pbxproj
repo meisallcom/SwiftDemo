@@ -1,0 +1,275 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7537190F1CE46F2A00741A65 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7537190E1CE46F2A00741A65 /* main.swift */; };
+		753719161CE46F4E00741A65 /* SwiftClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753719151CE46F4E00741A65 /* SwiftClass.swift */; };
+		7537191A1CE4711400741A65 /* OCClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 753719191CE4711400741A65 /* OCClass.m */; };
+		7537191E1CE473CB00741A65 /* OCClass1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7537191D1CE473CB00741A65 /* OCClass1.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		753719091CE46F2A00741A65 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7537190B1CE46F2A00741A65 /* SwiftCallOC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftCallOC; sourceTree = BUILT_PRODUCTS_DIR; };
+		7537190E1CE46F2A00741A65 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		753719151CE46F4E00741A65 /* SwiftClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftClass.swift; sourceTree = "<group>"; };
+		753719171CE4711400741A65 /* SwiftCallOC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftCallOC-Bridging-Header.h"; sourceTree = "<group>"; };
+		753719181CE4711400741A65 /* OCClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCClass.h; sourceTree = "<group>"; };
+		753719191CE4711400741A65 /* OCClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCClass.m; sourceTree = "<group>"; };
+		7537191B1CE472DF00741A65 /* testHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testHeader.h; sourceTree = "<group>"; };
+		7537191C1CE473CB00741A65 /* OCClass1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCClass1.h; sourceTree = "<group>"; };
+		7537191D1CE473CB00741A65 /* OCClass1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCClass1.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		753719081CE46F2A00741A65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		753719021CE46F2A00741A65 = {
+			isa = PBXGroup;
+			children = (
+				7537190D1CE46F2A00741A65 /* SwiftCallOC */,
+				7537190C1CE46F2A00741A65 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7537190C1CE46F2A00741A65 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7537190B1CE46F2A00741A65 /* SwiftCallOC */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7537190D1CE46F2A00741A65 /* SwiftCallOC */ = {
+			isa = PBXGroup;
+			children = (
+				7537190E1CE46F2A00741A65 /* main.swift */,
+				753719151CE46F4E00741A65 /* SwiftClass.swift */,
+				753719181CE4711400741A65 /* OCClass.h */,
+				753719191CE4711400741A65 /* OCClass.m */,
+				753719171CE4711400741A65 /* SwiftCallOC-Bridging-Header.h */,
+				7537191B1CE472DF00741A65 /* testHeader.h */,
+				7537191C1CE473CB00741A65 /* OCClass1.h */,
+				7537191D1CE473CB00741A65 /* OCClass1.m */,
+			);
+			path = SwiftCallOC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7537190A1CE46F2A00741A65 /* SwiftCallOC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 753719121CE46F2A00741A65 /* Build configuration list for PBXNativeTarget "SwiftCallOC" */;
+			buildPhases = (
+				753719071CE46F2A00741A65 /* Sources */,
+				753719081CE46F2A00741A65 /* Frameworks */,
+				753719091CE46F2A00741A65 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftCallOC;
+			productName = SwiftCallOC;
+			productReference = 7537190B1CE46F2A00741A65 /* SwiftCallOC */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		753719031CE46F2A00741A65 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "河南青云信息技术有限公司";
+				TargetAttributes = {
+					7537190A1CE46F2A00741A65 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 753719061CE46F2A00741A65 /* Build configuration list for PBXProject "SwiftCallOC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 753719021CE46F2A00741A65;
+			productRefGroup = 7537190C1CE46F2A00741A65 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7537190A1CE46F2A00741A65 /* SwiftCallOC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		753719071CE46F2A00741A65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7537191A1CE4711400741A65 /* OCClass.m in Sources */,
+				753719161CE46F4E00741A65 /* SwiftClass.swift in Sources */,
+				7537191E1CE473CB00741A65 /* OCClass1.m in Sources */,
+				7537190F1CE46F2A00741A65 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		753719101CE46F2A00741A65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		753719111CE46F2A00741A65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		753719131CE46F2A00741A65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_MODULE_NAME = SwiftModule;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftCallOC/SwiftCallOC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		753719141CE46F2A00741A65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_MODULE_NAME = SwiftModule;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftCallOC/SwiftCallOC-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		753719061CE46F2A00741A65 /* Build configuration list for PBXProject "SwiftCallOC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				753719101CE46F2A00741A65 /* Debug */,
+				753719111CE46F2A00741A65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		753719121CE46F2A00741A65 /* Build configuration list for PBXNativeTarget "SwiftCallOC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				753719131CE46F2A00741A65 /* Debug */,
+				753719141CE46F2A00741A65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 753719031CE46F2A00741A65 /* Project object */;
+}

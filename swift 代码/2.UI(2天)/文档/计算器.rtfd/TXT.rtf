@@ -1,0 +1,257 @@
+{\rtf1\ansi\ansicpg936\cocoartf1404\cocoasubrtf460
+{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red170\green13\blue145;\red92\green38\blue153;\red196\green26\blue22;
+\red0\green116\blue0;\red46\green13\blue110;\red28\green0\blue207;\red63\green110\blue116;\red38\green71\blue75;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \'d2\'bb
+\f1 .
+\f0 \'bc\'c6\'cb\'e3\'c6\'f7\'b5\'c4\'ca\'b5\'cf\'d6
+\f1 \
+
+\f0 \'bd\'e7\'c3\'e6
+\f1 :\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Pasted Graphic.tiff \width5480 \height8500
+}¬}\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0 \cf0 \'d7\'a2\'d2\'e2\'b5\'e3\'a3\'ba\'cb\'f9\'d3\'d0\'b0\'b4\'c5\'a5\'b5\'c4\'cf\'ec\'d3\'a6\'ca\'c2\'bc\'fe\'b6\'bc\'b7\'c5\'d4\'da
+\f1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+
+\f0 \'b4\'fa\'c2\'eb\'a3\'ba
+\f1 \
+\pard\tx529\pardeftab529\pardirnatural\partightenfactor0
+
+\f2\fs22 \cf2 \CocoaLigature0 import\cf0  UIKit\
+\cf2 import\cf0  Foundation\
+\
+\cf2 class\cf0  ViewController: \cf3 UIViewController\cf0  \{\
+\
+    \cf2 var\cf0  value = \cf4 ""\cf0  \cf5 //
+\f0 \'ca\'e4\'c8\'eb\'b5\'c4\'d6\'b5
+\f2 \
+\cf0     \cf2 var\cf0  operand = \cf4 ""\cf0  \cf5 //
+\f0 \'b2\'d9\'d7\'f7\'b7\'fb
+\f2  
+\f0 \'bc\'d3\'bc\'f5\'b3\'cb\'b3\'fd
+\f2 \
+\cf0     \cf2 var\cf0  operators = \cf4 ""\cf0  \cf5 //
+\f0 \'b2\'d9\'d7\'f7\'ca\'fd
+\f2 \
+\cf0     \cf2 var\cf0  resultOfCal = \cf4 ""\cf0 \
+    \
+    \cf2 @IBOutlet\cf0  \cf2 weak\cf0  \cf2 var\cf0  TextInput: \cf3 UITextField\cf0 !\
+    \
+    \cf2 override\cf0  \cf2 func\cf0  viewDidLoad() \{\
+        \cf2 super\cf0 .\cf6 viewDidLoad\cf0 ()\
+    \}\
+\
+    \cf2 override\cf0  \cf2 func\cf0  didReceiveMemoryWarning() \{\
+        \cf2 super\cf0 .\cf6 didReceiveMemoryWarning\cf0 ()\
+        \
+    \}\
+    \cf5 //
+\f0 \'c8\'a5\'b5\'f4\'bd\'e1\'b9\'fb\'d6\'d0\'b6\'e0\'d3\'e0\'b5\'c4
+\f2 0\
+\cf0     \cf2 func\cf0  deleteZero(\cf2 var\cf0  deleteChar :\cf3 String\cf0 ) ->\cf3 String\cf0 \{\
+        \cf2 var\cf0  stringLength :\cf3 Int\cf0  = \cf7 0\cf0 \
+        stringLength = deleteChar.\cf3 characters\cf0 .\cf3 count\cf0 \
+        \cf2 for\cf0  \cf2 var\cf0  i = stringLength ; i > \cf7 0\cf0  ; i-- \{\
+            \cf2 var\cf0  charLocation :\cf3 String\cf0  = \cf4 ""\cf0 \
+            charLocation = (deleteChar \cf2 as\cf0  \cf3 NSString\cf0 ).\cf6 substringWithRange\cf0 (\cf6 NSMakeRange\cf0 (i - \cf7 1\cf0 , \cf7 1\cf0 ))\
+            \cf2 if\cf0  charLocation == \cf4 "0"\cf0   \{\
+                deleteChar = (deleteChar \cf2 as\cf0  \cf3 NSString\cf0 ).\cf6 substringToIndex\cf0 (i - \cf7 1\cf0 )\
+            \}\cf2 else\cf0  \cf2 if\cf0  charLocation == \cf4 "."\cf0  \{\
+                deleteChar = (deleteChar \cf2 as\cf0  \cf3 NSString\cf0 ).\cf6 substringToIndex\cf0 (i - \cf7 1\cf0 )\
+                \cf2 break\cf0 \
+            \}\cf2 else\cf0 \{\
+                \cf2 break\cf0 \
+            \}\
+        \}\
+        \cf2 return\cf0  deleteChar\
+    \}\
+    \cf5 //
+\f0 \'c9\'be\'b3\'fd
+\f2 \
+\cf0     \cf2 func\cf0  deleteOfCal(deleteCh :\cf3 String\cf0 ) ->\cf3 String\cf0  \{\
+        \
+        \cf2 var\cf0  textCount : \cf3 Int\cf0  = \cf7 0\cf0 \
+        \cf5 //
+\f0 \'bc\'c6\'cb\'e3\'bd\'e1\'b9\'fb
+\f2  - 
+\f0 \'d7\'d6\'b7\'fb\'b4\'ae\'b3\'a4\'b6\'c8
+\f2 \
+\cf0         \cf2 for\cf0  ch \cf2 in\cf0  deleteCh.\cf3 characters\cf0  \{\
+            textCount++\
+        \}\
+        \cf2 let\cf0  chCount : \cf3 Int\cf0  = deleteCh.\cf3 characters\cf0 .\cf3 count\cf0 \
+        \cf6 print\cf0 (\cf4 "
+\f0 \'d7\'d6\'b7\'fb\'b4\'ae\'b3\'a4\'b6\'c8\'ce\'aa\'a3\'ba
+\f2 \cf0 \\\cf4 (\cf0 chCount\cf4 )"\cf0 )\
+        \cf5 //
+\f0 \'bd\'d8\'c8\'a1\'d7\'d6\'b7\'fb\'b4\'ae
+\f2 \
+\cf0         \cf2 let\cf0  tempChar = (deleteCh \cf2 as\cf0  \cf3 NSString\cf0 ).\cf6 substringToIndex\cf0 (textCount-\cf7 1\cf0 )\
+        \cf6 print\cf0 (\cf4 "
+\f0 \'bd\'d8\'c8\'a1\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'ce\'aa\'a3\'ba
+\f2 \cf0 \\\cf4 (\cf0 tempChar\cf4 )"\cf0 )\
+        \cf2 return\cf0  tempChar\
+    \
+    \}\
+    \cf5 //
+\f0 \'c5\'d0\'b6\'cf\'ca\'c7\'b7\'f1\'ca\'c7\'ca\'fd\'d7\'d6\'bb\'f2\'bc\'d3\'bc\'f5\'b7\'fb\'ba\'c5
+\f2 \
+\cf0     \cf2 func\cf0  isNumber( valueIsNum : \cf3 String\cf0 ) -> \cf3 Bool\cf0  \{\
+        \cf2 switch\cf0  valueIsNum\
+        \{\
+            \cf2 case\cf0  \cf4 "0"\cf0 ,\cf4 "1"\cf0 ,\cf4 "2"\cf0 ,\cf4 "3"\cf0 ,\cf4 "4"\cf0 ,\cf4 "5"\cf0 ,\cf4 "6"\cf0 ,\cf4 "7"\cf0 ,\cf4 "8"\cf0 ,\cf4 "9"\cf0 ,\cf4 "."\cf0  :\
+                \cf2 return\cf0  \cf2 true\cf0 \
+        \cf2 default\cf0  :\
+                \cf2 return\cf0  \cf2 false\cf0 \
+        \}\
+    \}\
+    \
+    \cf5 //
+\f0 \'ca\'e4\'c8\'eb\'b5\'c8\'ba\'c5\'ca\'b1\'b5\'c4\'d4\'cb\'cb\'e3\'b9\'fd\'b3\'cc
+\f2 \
+\cf0     \cf2 func\cf0  countOfCalculator(resultOfcal1 :\cf3 String\cf0  , operand1 :\cf3 String\cf0  , operators1 :\cf3 String\cf0 ) ->\cf3 Double\cf0  \{\
+        \
+        \cf5 //
+\f0 \'bd\'ab
+\f2  String 
+\f0 \'d7\'aa\'bb\'bb\'b3\'c9
+\f2  double 
+\f0 \'c0\'e0\'d0\'cd
+\f2 \
+\cf0         \cf2 var\cf0  resultOfCalDouble =  (resultOfcal1 \cf2 as\cf0  \cf3 NSString\cf0 ).\cf3 doubleValue\cf0 \
+        \cf2 let\cf0  operatorsDouble = (operators1 \cf2 as\cf0  \cf3 NSString\cf0 ).\cf3 doubleValue\cf0 \
+        \
+        \cf2 switch\cf0  operand1\
+        \{\
+            \cf2 case\cf0  \cf4 "+"\cf0 :\
+                resultOfCalDouble += operatorsDouble\
+                \cf6 print\cf0 (\cf4 "
+\f0 \'bc\'d3\'b7\'a8\'bd\'e1\'b9\'fb\'ce\'aa\'a3\'ba
+\f2 \cf0 \\\cf4 (\cf0 resultOfCalDouble\cf4 )"\cf0 )\
+            \cf2 case\cf0  \cf4 "-"\cf0 :\
+                resultOfCalDouble -= operatorsDouble\
+                \cf6 print\cf0 (\cf4 "
+\f0 \'bc\'f5\'b7\'a8\'bd\'e1\'b9\'fb\'ce\'aa\'a3\'ba
+\f2 \cf0 \\\cf4 (\cf0 resultOfCalDouble\cf4 )"\cf0 )\
+            \cf2 case\cf0  \cf4 "*"\cf0 :\
+                resultOfCalDouble *= operatorsDouble\
+                \cf6 print\cf0 (\cf4 "
+\f0 \'b3\'cb\'b7\'a8\'bd\'e1\'b9\'fb\'ce\'aa\'a3\'ba
+\f2 \cf0 \\\cf4 (\cf0 resultOfCalDouble\cf4 )"\cf0 )\
+            \cf2 case\cf0  \cf4 "/"\cf0 :\
+                resultOfCalDouble /= operatorsDouble\
+                \cf6 print\cf0 (\cf4 "
+\f0 \'b3\'fd\'b7\'a8\'bd\'e1\'b9\'fb\'ce\'aa\'a3\'ba
+\f2 \cf0 \\\cf4 (\cf0 resultOfCalDouble\cf4 )"\cf0 )\
+        \cf2 default\cf0 :\
+            \cf6 print\cf0 (\cf4 "Error 4 calculator"\cf0 )\
+            \
+        \}\
+        \cf2 return\cf0  resultOfCalDouble\
+    \}\
+    \
+    \cf5 //
+\f0 \'ca\'e4\'c8\'eb\'b7\'fb\'ba\'c5\'ca\'b1\'b5\'c4\'b4\'a6\'c0\'ed\'b9\'fd\'b3\'cc
+\f2 \
+\cf0     \cf2 func\cf0  notNum(valueIsNotNum :\cf3 String\cf0 )\{\
+        \cf5 //print(operators.characters.count)\
+\cf0         \cf2 switch\cf0  valueIsNotNum\
+        \{\
+            \cf5 //
+\f0 \'cb\'ab\'b2\'d9\'d7\'f7\'b7\'fb\'c7\'e9\'bf\'f6
+\f2 \
+\cf0             \cf2 case\cf0  \cf4 "+"\cf0 ,\cf4 "-"\cf0 ,\cf4 "*"\cf0 ,\cf4 "/"\cf0  :\
+                \cf8 resultOfCal\cf0  = \cf8 operators\cf0 \
+                \cf8 operand\cf0  = valueIsNotNum\
+                \cf8 TextInput\cf0 .\cf3 text\cf0  = \cf8 operand\cf0 \
+                \cf8 operators\cf0  = \cf4 ""\cf0 \
+            \cf5 //
+\f0 \'b5\'a5\'b2\'d9\'d7\'f7\'b7\'fb\'c7\'e9\'bf\'f6
+\f2 \
+\cf0             \cf2 case\cf0  \cf4 "C"\cf0 ,\cf4 "AC"\cf0 ,\cf4 "+/-"\cf0 :\
+                \cf2 switch\cf0  valueIsNotNum\
+                \{\
+                    \cf2 case\cf0  \cf4 "C"\cf0 :\
+                        \cf2 if\cf0 (\cf8 operators\cf0 .\cf3 characters\cf0 .\cf3 count\cf0 >\cf7 0\cf0 )\{\
+                            \cf8 operators\cf0  = (\cf8 operators\cf0  \cf2 as\cf0  \cf3 NSString\cf0 ).\cf6 substringToIndex\cf0 (\cf8 operators\cf0 .\cf3 characters\cf0 .\cf3 count\cf0 -\cf7 1\cf0 )\
+                            \cf6 print\cf0 (\cf4 "input \cf0 \\\cf4 (\cf8 operators\cf4 )"\cf0 )\
+                            \cf8 TextInput\cf0 .\cf3 text\cf0  = \cf8 operators\cf0 .\cf3 characters\cf0 .\cf3 count\cf0 >\cf7 0\cf0  ? \cf8 operators\cf0 :\cf4 "0"\cf0 \
+                            \
+                        \}\cf2 else\cf0 \{\
+                            \cf8 TextInput\cf0 .\cf3 text\cf0 =\cf4 "0"\cf0 \
+                        \}\
+                        \cf2 break\cf0 \
+                    \cf2 case\cf0  \cf4 "AC"\cf0  :\
+                        \cf8 operators\cf0  = \cf4 ""\cf0 \
+                        \cf8 TextInput\cf0 .\cf3 text\cf0  = \cf4 ""\cf0 \
+                    \cf2 case\cf0  \cf4 "+/-"\cf0  :\
+                        \
+                        \cf2 for\cf0  ch \cf2 in\cf0  \cf8 operators\cf0 .\cf3 characters\cf0  \{\
+                            \cf2 if\cf0  ch == \cf4 "-"\cf0  \{\cf5 //
+\f0 \'c8\'e7\'b9\'fb\'ca\'c7\'b8\'ba\'ca\'fd\'a3\'ac\'c8\'a5\'b5\'f4\'b8\'ba\'ba\'c5
+\f2 \
+\cf0                                 \cf8 operators\cf0  = (\cf8 operators\cf0  \cf2 as\cf0  \cf3 NSString\cf0 ).\cf6 substringFromIndex\cf0 (\cf7 1\cf0 )\
+                                \cf2 break\cf0 \
+                            \}\cf2 else\cf0 \{\cf5 //
+\f0 \'c8\'e7\'b9\'fb\'ca\'c7\'b8\'ba\'ca\'fd\'a3\'ac\'cc\'ed\'bc\'d3\'b8\'ba\'ba\'c5
+\f2 \
+\cf0                                 \cf8 operators\cf0  = \cf4 "-"\cf0  + \cf8 operators\cf0 \
+                                \cf2 break\cf0 \
+                            \}\
+                        \}\
+                        \cf8 TextInput\cf0 .\cf3 text\cf0  = \cf8 operators\cf0 \
+                \cf2 default\cf0 :\
+                    \cf6 print\cf0 (\cf4 "end of single operand"\cf0 )\
+                \}\
+            \cf2 case\cf0  \cf4 "="\cf0  :\
+                \cf2 var\cf0  resultOfCalDouble :\cf3 Double\cf0  = \cf7 0.0\cf0 \
+                resultOfCalDouble = \cf9 countOfCalculator\cf0 (\cf8 resultOfCal\cf0  , operand1: \cf8 operand\cf0  , operators1: \cf8 operators\cf0 )\
+                \cf5 //
+\f0 \'bd\'ab\'bd\'e1\'b9\'fb\'d3\'c9
+\f2  double 
+\f0 \'c0\'e0\'d0\'cd\'d7\'aa\'bb\'bb\'b3\'c9
+\f2  string 
+\f0 \'c0\'e0\'d0\'cd\'a3\'ac\'d2\'d4\'b1\'e3\'cf\'d4\'ca\'be
+\f2  -----\
+\cf0                 \cf8 resultOfCal\cf0  = \cf3 String\cf0 (stringInterpolationSegment: resultOfCalDouble)\
+                \cf5 //
+\f0 \'c8\'a5\'b5\'f4\'bd\'e1\'b9\'fb\'d6\'d0\'b6\'e0\'d3\'e0\'b5\'c4
+\f2 0\
+\cf0                 \cf8 resultOfCal\cf0  = \cf9 deleteZero\cf0 (\cf8 resultOfCal\cf0 )\
+                \cf8 TextInput\cf0 .\cf3 text\cf0  = \cf8 resultOfCal\cf0 \
+                \cf5 //
+\f0 \'c7\'e5\'bf\'d5\'bc\'c6\'cb\'e3\'b1\'e4\'c1\'bf
+\f2 \
+\cf0                 \cf8 resultOfCal\cf0  = \cf4 ""\cf0 \
+                \cf8 operators\cf0  = \cf4 ""\cf0 \
+        \cf2 default\cf0 :\
+            \cf6 print\cf0 (\cf4 "value of button is not clear"\cf0 , terminator: \cf4 ""\cf0 )\
+        \}\
+        \
+    \}\
+    \
+    \cf2 @IBAction\cf0  \cf2 func\cf0  didTouch(sender: \cf3 UIButton\cf0 ) \{\
+        \
+        \cf8 value\cf0  = sender.\cf3 currentTitle\cf0 !\
+        \cf2 let\cf0  valueOfButten : \cf3 Bool\cf0  = \cf9 isNumber\cf0 (\cf8 value\cf0 )\
+        \
+        \cf2 if\cf0  valueOfButten == \cf2 true\cf0  \{\
+            \cf8 operators\cf0  += \cf8 value\cf0 \
+            \cf8 TextInput\cf0 .\cf3 text\cf0  = \cf8 operators\cf0 \
+        \}\cf2 else\cf0 \{\
+            \cf9 notNum\cf0 (\cf8 value\cf0 )\
+        \}\
+\
+    \}}

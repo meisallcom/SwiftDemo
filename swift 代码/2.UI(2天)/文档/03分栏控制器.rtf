@@ -1,0 +1,93 @@
+{\rtf1\ansi\ansicpg936\cocoartf1404\cocoasubrtf460
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 PingFangSC-Regular;}
+{\colortbl;\red255\green255\blue255;\red170\green13\blue145;\red92\green38\blue153;\red0\green116\blue0;
+\red63\green110\blue116;\red196\green26\blue22;\red28\green0\blue207;\red46\green13\blue110;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab529
+\pard\tx529\pardeftab529\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 import\cf0  UIKit\
+\
+\cf2 @UIApplicationMain\cf0 \
+\cf2 class\cf0  AppDelegate: \cf3 UIResponder\cf0 , \cf3 UIApplicationDelegate\cf0 ,\cf3 UITabBarControllerDelegate\cf0  \{\
+\
+    \cf2 var\cf0  window: \cf3 UIWindow\cf0 ?\
+\
+\
+    \cf2 func\cf0  application(application: \cf3 UIApplication\cf0 , didFinishLaunchingWithOptions launchOptions: [\cf3 NSObject\cf0 : \cf3 AnyObject\cf0 ]?) -> \cf3 Bool\cf0  \{\
+        \cf4 // Override point for customization after application launch.\
+\cf0         \
+        \
+        \cf4 //
+\f1 \'b7\'d6\'c0\'b8\'bf\'d8\'d6\'c6\'c6\'f7
+\f0 \
+\cf0         \cf4 //
+\f1 \'b4\'b4\'bd\'a8
+\f0 3
+\f1 \'b8\'f6\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7
+\f0 \
+\cf0         \cf2 let\cf0  fVC=\cf5 FirstViewController\cf0 ()\
+        \cf2 let\cf0  sVC=\cf5 SecondViewController\cf0 ()\
+        \cf2 let\cf0  tVC=\cf5 ThirdViewController\cf0 ()\
+        \
+        \cf4 //
+\f1 \'b4\'b4\'bd\'a8\'b5\'bc\'ba\'bd\'bf\'d8\'d6\'c6\'c6\'f7
+\f0 \
+\cf0         \cf2 let\cf0  nav1=\cf3 UINavigationController\cf0 (rootViewController:fVC)\
+        \cf2 let\cf0  nav2=\cf3 UINavigationController\cf0 (rootViewController:sVC)\
+        \cf2 let\cf0  nav3=\cf3 UINavigationController\cf0 (rootViewController:tVC)\
+        \cf4 //
+\f1 \'b4\'b4\'bd\'a8\'b7\'d6\'c0\'b8\'bf\'d8\'d6\'c6\'c6\'f7\'b5\'c4\'b6\'d4\'cf\'f3
+\f0 \
+\cf0         \cf2 let\cf0  tabBar=\cf3 UITabBarController\cf0 ()\
+        nav1.\cf3 tabBarItem\cf0 =\cf3 UITabBarItem\cf0 (title:\cf6 "
+\f1 \'ca\'d3\'cd\'bc
+\f0 1"\cf0 ,image:\cf2 nil\cf0 ,tag: \cf7 1\cf0 )\
+        nav2.\cf3 tabBarItem\cf0 =\cf3 UITabBarItem\cf0 (title:\cf6 "
+\f1 \'ca\'d3\'cd\'bc
+\f0 2"\cf0 ,image:\cf2 nil\cf0 ,tag:\cf7 2\cf0 )\
+            nav3.\cf3 tabBarItem\cf0 =\cf3 UITabBarItem\cf0 (title: \cf6 "
+\f1 \'ca\'d3\'cd\'bc
+\f0 3"\cf0 ,image: \cf2 nil\cf0 ,tag: \cf7 3\cf0 )\
+        \
+        tabBar.\cf3 viewControllers\cf0 =[nav1,nav2,nav3]\
+        tabBar.\cf3 delegate\cf0 =\cf2 self\cf0 \
+        \cf4 //
+\f1 \'bd\'ab\'b7\'d6\'c0\'b8\'bf\'d8\'d6\'c6\'c6\'f7\'bc\'d3\'d4\'d8\'b5\'bd\'b8\'f9\'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7
+\f0 \
+\cf0         \cf2 self\cf0 .\cf5 window\cf0 ?.\cf3 rootViewController\cf0 =tabBar\
+        \cf2 return\cf0  \cf2 true\cf0 \
+    \}\
+    \cf4 //
+\f1 \'d1\'a1\'d6\'d0\'b7\'d6\'c0\'b8\'bf\'d8\'d6\'c6\'c6\'f7\'b5\'c4\'d1\'a1\'cf\'ee\'bf\'a8
+\f0 \
+\cf0     \cf2 func\cf0  tabBarController(tabBarController: \cf3 UITabBarController\cf0 , didSelectViewController viewController: \cf3 UIViewController\cf0 ) \{\
+        \cf8 print\cf0 (\cf6 "
+\f1 \'b7\'d6\'c0\'b8\'bf\'d8\'d6\'c6\'c6\'f7
+\f0  
+\f1 \'d1\'a1\'d4\'f1
+\f0 :(\cf0 \\\cf6 (\cf0 tabBarController.\cf3 selectedIndex\cf6 ))"\cf0 )\
+    \}\
+\
+\
+\
+\cf2 class\cf0  FirstViewController: \cf3 UIViewController\cf0  \{\
+\
+    \cf2 override\cf0  \cf2 func\cf0  viewDidLoad() \{\
+        \cf2 super\cf0 .\cf8 viewDidLoad\cf0 ()\
+\
+        \cf4 // Do any additional setup after loading the view.\
+\cf0         \cf2 self\cf0 .\cf3 view\cf0 .\cf3 backgroundColor\cf0 =\cf3 UIColor\cf0 .\cf8 redColor\cf0 ()\
+        \cf4 //
+\f1 \'b5\'bc\'ba\'bd\'cc\'f5\'b5\'c4\'b1\'ea\'cc\'e2\'a3\'ac\'d1\'a1\'cf\'ee\'bf\'a8\'b5\'c4\'b1\'ea\'cc\'e2
+\f0 \
+\cf0        \cf4 // self.title="
+\f1 \'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7
+\f0 1"\
+\cf0         \cf4 //
+\f1 \'d6\'bb\'c9\'e8\'d6\'c3\'b5\'bc\'ba\'bd\'cc\'f5\'b5\'c4\'b1\'ea\'cc\'e2
+\f0 \
+\cf0         \cf2 self\cf0 .\cf3 navigationItem\cf0 .\cf3 title\cf0 =\cf6 "
+\f1 \'ca\'d3\'cd\'bc\'bf\'d8\'d6\'c6\'c6\'f7
+\f0 1"\cf0 \
+    \}}
